@@ -3,7 +3,7 @@
 
 -- Find All the Toys for Hermione's cats
 -- Your code here
-SELECT owners.first_name, cats.name 
+SELECT owners.first_name, cats.name
 FROM cats
 JOIN cat_owners
 JOIN owners
@@ -21,10 +21,9 @@ AND (owners.id = cat_owners.owner_id)
 AND (cats.id = cat_owners.cat_id)
 WHERE owners.first_name = 'Hermione';
 
-
 SELECT toys.name
 FROM toys
-JOIN cat_owners 
+JOIN cat_owners
 ON (cat_owners.cat_id = toys.cat_id)
 JOIN owners
 ON (owners.id = cat_owners.owner_id)
